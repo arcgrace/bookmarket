@@ -935,9 +935,9 @@ button::-moz-focus-inner {
     display: none
 }
 
-body.mobile {
+/* body.mobile {
     position: fixed
-}
+} */
 
 body.mobile * {
     -webkit-touch-callout: none;
