@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js'></script>
+    <script src='http://www.turnjs.com/lib/turn.min.js'></script> 
+    <style>
+        html,
+body {
+  background-color: #efefef;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.wrapper {
+  align-items: center;
+  display: flex;
+  height: 90%;
+  justify-content: center;
+  margin: 5%;
+  width: 90%;
+}
+
+.aspect {
+  padding-bottom: 70%;
+  position: relative;
+  width: 100%;
+}
+
+.aspect-inner {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.flipbook {
+  height: 100%;
+  transition: margin-left 0.25s ease-out;
+  width: 100%;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.flipbook .page {
+  height: 100%;
+  width: 100%;
+}
+
+.flipbook .page img {
+  max-width: 100%;
+  height: 100%;
+}
+
+    </style>
+</head>
+<body>
+  <h1>hello where am i</h1>
+    <div class="wrapper">
+        <div class="aspect">
+          <div class="aspect-inner">
+            <div class="flipbook" id="flipbook">
+              <div class="page"><img src="https://arcgrace.github.io/bookmarket/img/0001.jpg" draggable="false" alt="" /></div>
+              <div class="page"><img src="https://arcgrace.github.io/bookmarket/img/0002.jpg" draggable="false" alt="" /></div>
+              <div class="page"><img src="https://arcgrace.github.io/bookmarket/img/0003.jpg" draggable="false" alt="" /></div>
+              <div class="page"><img src="https://arcgrace.github.io/bookmarket/img/0004.jpg" draggable="false" alt="" /></div>
+              <div class="page"><img src="https://arcgrace.github.io/bookmarket/img/0005.jpg" draggable="false" alt="" /></div>
+              <div class="page"><img src="https://arcgrace.github.io/bookmarket/img/0006.jpg" draggable="false" alt="" /></div>
+              <div class="page"><img src="https://arcgrace.github.io/bookmarket/img/0007.jpg" draggable="false" alt="" /></div>
+              <div class="page"><img src="https://arcgrace.github.io/bookmarket/img/0008.jpg" draggable="false" alt="" /></div>
+              <div class="page"><img src="https://arcgrace.github.io/bookmarket/img/0009.jpg" draggable="false" alt="" /></div>
+              <div class="page"><img src="https://arcgrace.github.io/bookmarket/img/0010.jpg" draggable="false" alt="" /></div>
+              <div class="page"><img src="https://arcgrace.github.io/bookmarket/img/0011.jpg" draggable="false" alt="" /></div>
+              <div class="page"><img src="https://arcgrace.github.io/bookmarket/img/0012.jpg" draggable="false" alt="" /></div>
+              <div class="page"><img src="https://arcgrace.github.io/bookmarket/img/0013.jpg" draggable="false" alt="" /></div>
+              <div class="page"><img src="https://arcgrace.github.io/bookmarket/img/0014.jpg" draggable="false" alt="" /></div>
+              <div class="page"><img src="https://arcgrace.github.io/bookmarket/img/0015.jpg" draggable="false" alt="" /></div>
+              <div class="page"><img src="https://arcgrace.github.io/bookmarket/img/0016.jpg" draggable="false" alt="" /></div>
+              <div class="page"><img src="https://arcgrace.github.io/bookmarket/img/0017.jpg" draggable="false" alt="" /></div>
+              <div class="page"><img src="https://arcgrace.github.io/bookmarket/img/0018.jpg" draggable="false" alt="" /></div>
+              <div class="page"><img src="https://arcgrace.github.io/bookmarket/img/0019.jpg" draggable="false" alt="" /></div>
+              <div class="page"><img src="https://arcgrace.github.io/bookmarket/img/0020.jpg" draggable="false" alt="" /></div>
+              <div class="page"><img src="https://arcgrace.github.io/bookmarket/img/0021.jpg" draggable="false" alt="" /></div>
+              <div class="page"><img src="https://arcgrace.github.io/bookmarket/img/0022.jpg" draggable="false" alt="" /></div>
+              <div class="page"><img src="https://arcgrace.github.io/bookmarket/img/0023.jpg" draggable="false" alt="" /></div>
+              <div class="page"><img src="https://arcgrace.github.io/bookmarket/img/0024.jpg" draggable="false" alt="" /></div>
+
+              <!-- <div class="page"><img src="https://raw.github.com/blasten/turn.js/master/demos/magazine/pages/04.jpg" draggable="false" alt="" /></div>
+              <div class="page"><img src="https://raw.github.com/blasten/turn.js/master/demos/magazine/pages/05.jpg" draggable="false" alt="" /></div>
+              <div class="page"><img src="https://raw.github.com/blasten/turn.js/master/demos/magazine/pages/06.jpg" draggable="false" alt="" /></div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+      var flipbookEL = document.getElementById('flipbook');
+
+        window.addEventListener('resize', function (e) {
+            flipbookEL.style.width = '';
+          flipbookEL.style.height = '';
+          $(flipbookEL).turn('size', flipbookEL.clientWidth, flipbookEL.clientHeight);
+        });
+        
+        $(flipbookEL).turn({
+            autoCenter: true
+        });
+        </script>
+</body>
+</html>
